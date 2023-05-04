@@ -101,6 +101,10 @@ class Speedtest
         try {
             $client = new GuzzleClient();
 
+            // $client = new GuzzleHttp\Client();
+
+            
+            
             $options = [
                 "verify"  => true,
                 "timeout" => $this->config->getTimeout(),
@@ -115,21 +119,32 @@ class Speedtest
                 ],
                 // "debug" => true
             ];
-
+            
             if ($this->config->getProxyType() == "socks5") {
                 $options["proxy"] = "socks5://" . $this->config->getProxy();
             } else {
                 $options["proxy"] = "http://" . $this->config->getProxy();
             }
 
+            // $request = new \GuzzleHttp\Psr7\Request('GET', 'https://www.speedtest.net/speedtest-config.php', $options);
+            // $promise = $client->sendAsync($request)->then(function ($response) {
+            //     $data = $response->getBody();
+            // });
+            // $promise->wait();
+
+            
             $res = $client->request('GET', 'https://www.speedtest.net/speedtest-config.php', $options);
 
             $data = $res->getBody()->getContents();
-            $xml = simplexml_load_string($data);
 
+            
+            $xml = simplexml_load_string($data);
+            
             if (empty($xml)) {
                 throw new SpeedtestException("Couldn't get remote client config. Reason: empty xml data.");
             }
+
+            
 
             $server_config = $xml->{'server-config'};
             $download = $xml->download;

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "nextpost-tech/speedtest-php": "^1.0"
+    }
+}

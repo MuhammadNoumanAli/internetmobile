@@ -1,14 +1,14 @@
 <?php
+
 require 'vendor/autoload.php';
 
 $speedtest = new NextpostTech\Speedtest\Speedtest();
-print_r($speedtest);
-die;
 $speedtest->getServers();
 $speedtest->getBestServer();
 $speedtest->download();
-$speedtest->upload();
+$speedtest->getUpload();
 
 $results = $speedtest->results();
 
+echo "<pre>";
 print_r($results);

@@ -8,6 +8,6 @@ $active_page = $components[1];
 
 
 
-$contact_number = '+1255-568-6523';
-$contact_email = 'info@internetmoile.com';
+$contact_number = '(888) 537-3212';
+$contact_email = 'info@getbestinternetspeed.com';
 

@@ -7,18 +7,21 @@ include "includes/config.php"; ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <!-- <link rel="profile" href="https://gmpg.org/xfn/11"> -->
     <script>document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
     <title> Get Best Internet Speed</title>
-    <meta name='robots' content='max-image-preview:large'/>
+    <!-- <meta name='robots' content='max-image-preview:large'/> -->
     <link rel='dns-prefetch' href='http://fonts.googleapis.com/'/>
 <!--    <link rel="alternate" type="application/rss+xml" title=">Get Best Internet Speed &raquo; Feed" href=""/>-->
 <!--    <link rel="alternate" type="application/rss+xml" title=">Get Best Internet Speed &raquo; Comments Feed"-->
 <!--          href="comments/feed/index.html"/>-->
     <style>
-        .accordian-width{
-            min-width: 527px;
+        @media only screen  and (min-width : 1224px) {
+            .accordian-width{
+                min-width: 527px;
+            }
         }
+        
         .number-hidden{
             display: none;
         }
@@ -40,7 +43,7 @@ include "includes/config.php"; ?>
             }
         }
     </style>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         window._wpemojiSettings = {
             "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
             "ext": ".png",
@@ -83,7 +86,7 @@ include "includes/config.php"; ?>
                 "complete" === a.readyState && t.readyCallback()
             })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji)))
         }(window, document, window._wpemojiSettings);
-    </script>
+    </script> -->
 
     <link rel='stylesheet' id='wp-block-library-css' href='includes/css/dist/block-library/style.minae48.css?ver=6.2'
           type='text/css' media='all'/>
@@ -175,20 +178,20 @@ include "includes/config.php"; ?>
     <script type='text/javascript' src='includes/js/jquery/jquery.mina767.js?ver=3.6.3' id='jquery-core-js'></script>
     <script type='text/javascript' src='includes/js/jquery/jquery-migrate.min6b00.js?ver=3.4.0'
             id='jquery-migrate-js'></script>
-    <link rel="https://api.w.org/" href="wp-json/index.html"/>
-    <link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/15.json"/>
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd"/>
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="includes/wlwmanifest.xml"/>
-    <meta name="generator" content="WordPress 6.2"/>
-    <meta name="generator" content="WooCommerce 7.5.1"/>
-    <link rel="canonical" href="/"/>
-    <link rel='shortlink' href='/'/>
-    <link rel="alternate" type="application/json+oembed"
+    <!-- <link rel="https://api.w.org/" href="wp-json/index.html"/> -->
+    <!-- <link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/15.json"/> -->
+    <!-- <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd"/> -->
+    <!-- <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="includes/wlwmanifest.xml"/> -->
+    <!-- <meta name="generator" content="WordPress 6.2"/> -->
+    <!-- <meta name="generator" content="WooCommerce 7.5.1"/> -->
+    <!-- <link rel="canonical" href="/"/> -->
+    <!-- <link rel='shortlink' href='/'/> -->
+    <!-- <link rel="alternate" type="application/json+oembed"
           href="wp-json/oembed/1.0/embed99ce.json?url=https%3A%2F%2Fthemexriver.com%2Fwp%2Fnextbit%2F"/>
     <link rel="alternate" type="text/xml+oembed"
-          href="wp-json/oembed/1.0/embedb089?url=https%3A%2F%2Fthemexriver.com%2Fwp%2Fnextbit%2F&amp;format=xml"/>
+          href="wp-json/oembed/1.0/embedb089?url=https%3A%2F%2Fthemexriver.com%2Fwp%2Fnextbit%2F&amp;format=xml"/> -->
 
-    <link rel="shortcut icon" type="image/x-icon" href="uploads/2023/03/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="uploads/2023/03/favicon.ico">
 
 
     <noscript></noscript>

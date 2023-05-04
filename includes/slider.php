@@ -25,7 +25,7 @@
                                         <div class="content-boxed">
                                             <div class="inner-box">
 
-                                                <div class="title">Get Best Internet Speed</div>
+                                            <div class="title" style="color: white;">Get Best <span style="color: red">Internet</span> Speed</div>
 
                                                 <h1>Ultimate control of your internet</h1>
 
@@ -58,7 +58,7 @@
                                         <div class="content-boxed">
                                             <div class="inner-box">
 
-                                                <div class="title">Get Best Internet Speed</div>
+                                            <div class="title" style="color: white;">Get Best <span style="color: red">Internet</span> Speed</div>
 
                                                 <h1>Ultimate control of your internet</h1>
 

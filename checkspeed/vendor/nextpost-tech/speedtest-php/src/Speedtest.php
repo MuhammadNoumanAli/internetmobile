@@ -113,7 +113,7 @@ class Speedtest
                 "headers" => [
                     "accept-language" => "en-US"
                 ],
-                // "debug" => true
+                "debug" => true
             ];
 
             if ($this->config->getProxyType() == "socks5") {

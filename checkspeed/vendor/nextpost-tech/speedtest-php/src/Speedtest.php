@@ -122,10 +122,6 @@ class Speedtest
                 $options["proxy"] = "http://" . $this->config->getProxy();
             }
 
-            echo "<pre>";
-            print_r($options);
-            die;
-
             $res = $client->request('GET', 'https://www.speedtest.net/speedtest-config.php', $options);
 
             $data = $res->getBody()->getContents();

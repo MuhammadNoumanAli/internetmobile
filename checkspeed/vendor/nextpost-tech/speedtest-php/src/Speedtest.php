@@ -55,6 +55,19 @@ class Speedtest
         $this->config = $config ?: new Config();
         $this->getRemoteConfig();
     }
+
+    /**
+     * 
+     * @param \Url $url
+     * @param \Array $params
+     * @return \Array
+     */
+    protected function guzzleRequest($url, $params = null) {
+        $client = new GuzzleClient();
+        return $response = $client->get($url);
+        // $data_body = $response->getBody();
+        // return $data_contents = $response->getBody()->getContents();
+    }
     
     /**
      * 
@@ -122,11 +135,14 @@ class Speedtest
                 $options["proxy"] = "http://" . $this->config->getProxy();
             }
 
-            $res = $client->request('GET', 'https://www.speedtest.net/speedtest-config.php', $options);
+            $res = $this->guzzleRequest('https://www.speedtest.net/speedtest-config.php');
+
+            
+
+            // $res = $client->request('GET', 'https://www.speedtest.net/speedtest-config.php', $options);
 
             $data = $res->getBody()->getContents();
             $xml = simplexml_load_string($data);
-            
 
             if (empty($xml)) {
                 throw new SpeedtestException("Couldn't get remote client config. Reason: empty xml data.");
@@ -199,8 +215,10 @@ class Speedtest
             } else {
                 $options["proxy"] = "http://" . $this->config->getProxy();
             }
+            
+            $res = $this->guzzleRequest('https://c.speedtest.net/speedtest-servers-static.php');
 
-            $res = $client->request('GET', 'https://c.speedtest.net/speedtest-servers-static.php', $options);
+            // $res = $client->request('GET', 'https://c.speedtest.net/speedtest-servers-static.php', $options);
 
             $data = $res->getBody()->getContents();
             $xml = simplexml_load_string($data);
@@ -311,8 +329,10 @@ class Speedtest
                     } else {
                         $options["proxy"] = "http://" . $this->config->getProxy();
                     }
+
+                    $res = $this->guzzleRequest($url);
     
-                    $res = $client->request('GET', $url, $options);
+                    // $res = $client->request('GET', $url, $options);
     
                     $data = $res->getBody()->getContents();
     

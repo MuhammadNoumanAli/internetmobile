@@ -126,6 +126,8 @@ class Speedtest
 
             $data = $res->getBody()->getContents();
             $xml = simplexml_load_string($data);
+            print_r($xml);
+            die;
 
             if (empty($xml)) {
                 throw new SpeedtestException("Couldn't get remote client config. Reason: empty xml data.");

@@ -122,12 +122,15 @@ class Speedtest
                 $options["proxy"] = "http://" . $this->config->getProxy();
             }
 
+            echo "<pre>";
+            print_r($options);
+            die;
+
             $res = $client->request('GET', 'https://www.speedtest.net/speedtest-config.php', $options);
 
             $data = $res->getBody()->getContents();
             $xml = simplexml_load_string($data);
-            print_r($xml);
-            die;
+            
 
             if (empty($xml)) {
                 throw new SpeedtestException("Couldn't get remote client config. Reason: empty xml data.");

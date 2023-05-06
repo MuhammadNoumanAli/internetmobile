@@ -37,11 +37,24 @@ include "includes/config.php"; ?>
         .elementor-element-68b73fb{
             padding-top: 21px !important;
         }
+        #language-selector-container{
+            display: none;
+        }
+
+        .powered-by-container{
+            display:none;
+        }
         @media (min-width: 768px) {
             .elementor-column.elementor-col-33, .elementor-column[data-col="25"] {
                 width: 33.3%;
             }
         }
+
+        /* html.loaded-in-iframe #header,
+        html.loaded-in-iframe #footer,
+        html.loaded-in-iframe #wpadminbar {
+            display: none!important;
+        } */
     </style>
     <!-- <script type="text/javascript">
         window._wpemojiSettings = {

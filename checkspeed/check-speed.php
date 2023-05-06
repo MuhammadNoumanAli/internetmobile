@@ -7,6 +7,7 @@ $speedtest->getServers();
 $speedtest->getBestServer();
 $speedtest->download();
 $speedtest->upload();
+$speedtest->Progress();
 
 $results = $speedtest->results();
 

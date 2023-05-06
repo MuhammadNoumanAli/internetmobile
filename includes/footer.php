@@ -281,7 +281,7 @@
 <script type='text/javascript' src='wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2'
 
         id='elementor-waypoints-js'></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type='text/javascript' id='elementor-frontend-js-before'>
 
     var elementorFrontendConfig = {
@@ -481,6 +481,112 @@
 <script type='text/javascript' src='wp-content/plugins/element-helper/assets/js/elh-element8a54.js?ver=1.0.0'
 
         id='element-helper-js'></script>
+
+
+        <script>
+                // $('.logo-container').hide();
+                // console.log($('#iframe-id').contents().find('.logo-container .logo'));
+                // $('#iframe-id').contents().find('#language-selector-container').hide();
+                // var poweredWrapper = $('#iframe-id').contents().find("#language-selector-container").hide();
+                // console.log(poweredWrapper);
+
+                // // $('#iframe-id').ready(function(){
+                // //         $('#iframe-id').contents().find("#language-selector-container").hide();
+                // // });
+                // $(document).ready(function() {
+                //         $('#language-selector-container', frames['iframe-id'].document).hide();
+                //         $('#iframe-id').contents().find("#language-selector-container").hide();
+                // } );
+
+                // $(document).ready(function(){ 
+                //         setTimeout(function () {
+                //                         $('#language-selector-container', frames['iframe-id'].document).hide();
+                //                         $("#iframe-id").contents().find("#language-selector-container").hide();
+                                        
+                //                 },300
+                //         );
+                //         setTimeout(function () {
+                //                 $("#iframe-id").contents().find("#language-selector-container").hide();
+                //                 }, 3000
+                //         );
+                // });
+
+                // $(document).ready(function() {
+                //         $('#language-selector-container', frames['iframe-id'].document).hide();
+                // } );
+
+                // function inIframe() {
+                //         try {
+                //                 return window.self !== window.top;
+                //         } catch (Exception) {
+                //                 return true;
+                //         }
+                // }
+
+                //         if (inIframe()) {
+                //         document.getElementsByTagName('html')[0].classList.add('loaded-in-iframe');
+                //         // Alternatively you could skip the CSS and just hide elements using JavaScript here!.
+                //         }
+
+
+                        $(document).ready(function() {
+                                var windowURL = window.location.href;
+                                if (windowURL.indexOf('noheaderfooter') > -1) {
+                                        $('.footer-container').css('display', 'none');
+                                }
+                                // var frame = document.querySelector("iframe");
+                                // header = frame.contentDocument.querySelector("header");
+                                // header.remove();
+                                // footer = frame.contentDocument.querySelector("footer");
+                                // footer.remove();
+
+                                // var iframe = document.getElementById("iframe-id");
+                                // var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                                // var style = iframeDocument.createElement("style");
+                                // style.innerHTML = ".logo-container{ display: none; }";
+                                // iframeDocument.head.appendChild(style);
+
+                                // console.log(style);
+
+                                var iframe = document.getElementById("iframe-id");
+                                var element = iframe.contentWindow.document.getElementsByClassName("logo-container");
+                                element.style.display = "none";
+
+                                var iframe = $("#iframe-id").contents();
+                                iframe.find(".logo-container").hide();
+                        });
+
+                        function inIframe() {
+                                try {
+                                        return window.self !== window.top;
+                                } catch(e) {
+                                        return true;
+                                }
+                        }
+
+                        if(inIframe){
+                                // document.getElementsByClassName('logo-container').style.display = "none"; //if you want javascript only
+                                $(".logo-container").hide(); // if you want jquery
+                        }
+
+
+                        (function(){
+                                if (window!=window.top) {
+                                        var noiframe = document.getElementsByClassName("noiframeyall"), 
+                                        body = document.getElementsByTagName('body')[0],
+                                        html = document.getElementsByTagName('html')[0];
+
+                                        for (i=0, len = noiframe.length; i < len; i++){
+                                        noiframe[i].style.display = 'none';
+                                        }
+                                body.className = body.className.replace( /(?:^|\s)noiframe(?!\S)/ , '' );
+                                html.style.overflow = 'hidden';
+                                }
+                        })();
+
+                        
+        </script>
+        
 
 </body>
 

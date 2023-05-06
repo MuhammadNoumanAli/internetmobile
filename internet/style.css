@@ -1,0 +1,9 @@
+.result{
+    width: 66%;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+#result{
+    border: 1px solid #3498b3;
+}
